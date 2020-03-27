@@ -43,7 +43,7 @@ module.exports = {
 
     const incident = await connection('incidents')
       .where('id', id)
-      .select('companyId')
+      .select('CompanyId as companyId')
       .first();
     if (incident == null) {
       return response.status(400).json({ error: 'Bad request' });
