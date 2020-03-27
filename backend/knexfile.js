@@ -14,6 +14,16 @@ module.exports = {
     }
   },
 
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/testdb.sqlite'
+    },
+    migrations: {
+      directory: './src/database/migrations'
+    }
+  },
+
   staging: {
     client: 'postgresql',
     connection: {
